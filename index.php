@@ -9,4 +9,6 @@
     }else {
         echo "Erro ao conectar ao banco de dados";
     }
+
+    $usuario -> cadastrar("Kayan", "kayan@gmail.com", "123456");
 ?>
