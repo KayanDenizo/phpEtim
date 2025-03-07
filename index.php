@@ -1,14 +1,12 @@
-<?php 
-    // Importar classe
-    require 'Usuario.class.php';
+<?php
+// Importar classe
+require 'Usuario.class.php';
 
-    $sucesso = $usuario = new Usuario();
+$sucesso = $usuario = new Usuario();
 
-    if ($sucesso ) {
-        echo "Conectado ao banco de dados";
-    }else {
-        echo "Erro ao conectar ao banco de dados";
-    }
+if ($sucesso) {
 
-    $usuario -> cadastrar("Kayan", "kayan@gmail.com", "123456");
-?>
+    $usuario->cadastrar("Adriano", "adri@gmail.com", "123456");
+} else {
+    echo "Erro ao conectar ao banco de dados";
+}
