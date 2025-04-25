@@ -29,7 +29,7 @@ class Usuario
 
 
         //primeiro passo: criar a consulta SQL (query)
-        $sql = "INSERT INTO usuarios SET nome = :n, email = :e, senha = :s";
+        $sql = "INSERT INTO Usuarios SET nome = :n, email = :e, senha = :s";
 
         //Segundo passo: passar a consulta para o metodo prepare do PDO
         $stmt = $this->pdo->prepare($sql);
@@ -50,7 +50,7 @@ class Usuario
 
     public function chkUser($email)
     {
-        $sql = "SELECT * FROM usuarios WHERE email = :e";
+        $sql = "SELECT * FROM Usuarios WHERE email = :e";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(":e", $email);
 
