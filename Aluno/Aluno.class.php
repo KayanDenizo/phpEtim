@@ -8,6 +8,10 @@ class Aluno {
     private $periodo;
     private $pdo;
 
+    function __construct(){
+        echo "Construtor chamado";
+    }
+
     public function getRa() {
         return $this->ra;
     }
@@ -34,22 +38,22 @@ class Aluno {
         $this->periodo = $periodo;
     }
 
-    public function __construct() {
-        /* A Classe PDO foi criada para auxiliar a interacao com DB
-        Ela precisa de tres atributos */
+    // public function __construct() {
+    //     /* A Classe PDO foi criada para auxiliar a interacao com DB
+    //     Ela precisa de tres atributos */
 
-        $dns = "mysql:dbname=usuarioetimpwii;host=localhost";
-        $user = "root";
-        $pass = "";
+    //     $dns = "mysql:dbname=usuarioetimpwii;host=localhost";
+    //     $user = "root";
+    //     $pass = "";
 
-        try {
-            $this->pdo = new PDO($dns,$user,$pass);
-            return true;
-        } catch (\Throwable $th) {
-            return false;
-        }
+    //     try {
+    //         $this->pdo = new PDO($dns,$user,$pass);
+    //         return true;
+    //     } catch (\Throwable $th) {
+    //         return false;
+    //     }
 
-    }
+    // }
 }
 
 ?>
